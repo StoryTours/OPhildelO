@@ -1,0 +1,108 @@
+/* Textes */
+h1, h2, h3, h4 {margin: 1em 0 0.5em !important; text-transform: uppercase;}
+h4, figcaption {font-weight: bold;}
+figcaption {text-transform: uppercase;}
+p {margin: 0.5em 0;}
+a {display: inline-block;}
+.bouton {padding: 5px 10px; color: white; background-color: #0e3853 !important; text-decoration: none;}
+
+/* Structure */
+body {margin: 0 3%; padding: 0; background-color: white; border: 0; text-align: center; font-size: calc(0.6em + 0.6vw); font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;}
+body * {margin: 0; padding: 0; background-color: inherit; border: inherit;}
+main {background-color: #ffffbf; border: 1px #ffffbf;} /* changer border-color pour voir les boxs*/
+header, section {padding: 0 3%;}
+li {display: inline-block; vertical-align: top; padding: 0 0.5em;}
+figure li {display: block;}
+figure img {width: 100%; max-width: 11em;}
+#produits {margin-top: -3em; padding-top: 3em;}
+#contact {margin-top: -2em; padding-top: 3em;}
+#contact::before {content: " "; display: block; margin: -3.1em -3.5% 1em; background-color: #ffff9f; border: 1em solid #ffff9f;}
+
+/* Navigation */
+nav {position: fixed; top: 0; left: 0; right: 0; height: 2.1em; padding: 0 3%; background-color: white; border: 1px solid white; z-index: 10; text-align: left;} /* changer boder-color pour voir les boxs*/
+nav input, nav label {display: none;}
+nav ul {display: inline-block; margin: 0 0 0 11em; height: 2em; z-index: 11;}
+nav li a {font-size: 0.9em; text-decoration: none;}
+nav img {position: absolute; top: 0; width: 10em; min-width: 100px; max-width: 300px;}
+
+/* Navigation et index.html#contacte */
+@media screen and ( max-width : 700px ) {
+  nav input {display: block; position: absolute; right: 3.2%; margin-top: 0.3em; z-index: 11;}
+  nav label {display: block; position: absolute; right: 3%; padding: 0.1em 20px 0px 0px; z-index: 12; background-color: transparent; border-color: transparent; cursor: pointer;}
+  nav ul {display: none;}
+  nav input:checked ~ ul {display: block; position: absolute; right: 3%; margin: 0.7em -3%; width: 15em; background-color: #ffff9f; border-color: #ffff9f; text-align: center;}
+  nav li {display: block; padding: 1em 0; font-size: 1.5em;}
+
+  ul.disponible li {width: 20%;}
+  #contact li {display: block;}
+  figcaption#ete::after {content: " "; display: none;}
+}
+
+/* index.html */
+#logo {position: relative; top: 2em; width: 60%;}
+#intro {position: relative; margin: 1em 2em; padding: 0 0 2em; background-image: url("images/panel-bkg.png"); background-repeat: no-repeat; background-size: 100% 100%;}
+#intro p {padding: 2em 3em 1em;}
+#glace {position: absolute; top: -1em; left: -3em; width: 7em;}
+#bubbletea {position: absolute; bottom: -1em; right: -2em; width: 7em;}
+#intro, #intro * {background-color: transparent; border-color: transparent;}
+
+/* index.html, incontournables.html, saisonniers.html */
+.disponible {margin: 0 -3.3%; padding: 1em 0; background-color: #ffff9b; border: 1px solid #ffff9b;}
+.disponible li {width: 22%;}
+.disponible figure img {max-width: 10em;}
+.disponible * {border: 1px #ffff9b;}
+
+/* index.html */
+#ete::after {content: " "; display: block; height: 1.35em;}
+#telephone {display: inline-block;}
+#contact > ul > li {margin-top: 0.5em;}
+#contact > img {width: 25em;}
+#contact a img {width: 5em;}
+
+/* ptits-croques.html */
+#platsprincipaux li {width: 45%; vertical-align: middle;}
+#desserts li {width: 18%; vertical-align: middle;}
+li#tacos {width: 30%;}
+#etudiant li {width: 25%;}
+
+@media screen and (min-width: 371px) and (max-width: 550px) {
+  ul.disponible li {width: 18%;}
+  #desserts li {width: 45%;}
+
+  #image {text-align: center;}
+}
+@media screen and ( max-width : 370px ) {
+  ul.disponible li {width: 35%;}
+  #platsprincipaux li, #desserts li, #etudiant li {width: 100%;}
+  
+  ul#incontournables li, ul#saisonniers1 li, ul#saisonniers2 li {width: 100%; padding: 0; text-align: left;}
+  #incontournables img, #saisonniers1 img, #saisonniers2 img {float: left; width: 5em;}
+  p.type, #incontournables figcaption, #saisonniers1 figcaption, #saisonniers2 figcaption {display: block; margin-left: 6em;}
+  p.type {margin-top: 1em;}
+  li#avantages, li#location, li#image, li#pris {width: 100%;}
+  li#image {text-align: center;}
+}
+
+/* incontournables.html, saisonniers.html */
+#incontournables li, #saisonniers1 li, #saisonniers2 li {width: 10em; padding-bottom: 1em;}
+.type {margin: 0px; text-transform: uppercase;}
+
+/* coolbox.html */
+#avantages {width: 40%; text-align: left;}
+#location {width: 50%; text-align: left;}
+#image {width: 38%; text-align: left;}
+#image img {max-width: 14em;}
+#pris {width: 50%; min-width: 100px;}
+#avantages li, #location li {display: list-item; margin-left: 1.5em; padding: 0; list-style-type: disc;}
+
+#tabs {display: inline-block; text-align: center; background-color: white;}
+#tabs input, #tabs #contenu p {display: none;}
+#tabs label {display: inline-block; width: 48%; padding: 0.3em 0px; background: #eeeeee ; cursor: pointer;}
+#tabs label:hover {background: #b2b2b2;}
+#tabs label:active {background: grey;}
+#tab1:checked ~ #tab label[for="tab1"], #tab2:checked ~ #tab label[for="tab2"] {position: relative; color: white; background: #0e3853;}
+#tabs #contenu {display: block; padding: 0.5em 0;}
+#tabs #contenu strong {font-size: 3em;}
+#tab1:checked ~ #contenu #contenu1, #tab2:checked ~ #contenu #contenu2 {display: block;}
+#tabs * {border: 0;}
+#tabs > p {margin: 0px; padding: 0.5em; background-color: #eeeeee;}
