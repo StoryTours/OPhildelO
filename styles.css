@@ -51,6 +51,7 @@ nav img {position: absolute; top: 0; width: 10em; min-width: 100px; max-width: 3
 .disponible li {width: 22%;}
 .disponible figure img {max-width: 10em;}
 .disponible * {border: 1px #ffff9b;}
+p.disponible {margin-top: -1em;}
 
 /* index.html */
 #ete::after {content: " "; display: block; height: 1.35em;}
